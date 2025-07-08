@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>请我吃KFC</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding-top: 60px;
+        }
+        img {
+            width: 120px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .question {
+            font-size: 18px;
+            margin: 25px 0;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .yes {
+            background-color: #ff8a8a;
+            color: white;
+        }
+        .no {
+            background-color: #8ab6ff;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>给你一个赎罪的机会！</h2>
+        <img src="https://i.imgur.com/E8RXA1f.png" alt="角色形象"><br>
+        <div class="question">可以V我50吃KFC吗？</div>
+        <button class="btn yes" onclick="handleYes()">好啊请你吃</button>
+        <button class="btn no" id="noBtn" onmouseover="moveButton()">你在想屁吃</button>
+    </div>
+
+    <script>
+        function handleYes() {
+            alert("谢谢宝宝，爱你🤟");
+        }
+
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.floor(Math.random() * (window.innerWidth - 100));
+            const y = Math.floor(Math.random() * (window.innerHeight - 100));
+            btn.style.position = "absolute";
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
